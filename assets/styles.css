@@ -458,178 +458,52 @@ a:hover, a:focus {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 1.5rem;
+  font-size: 2rem;
   margin-bottom: var(--space-md);
-  position: relative;
-  overflow: hidden;
+  color: white;
 }
 
-/* Pastel Gradient Medical Icons */
-.card__icon--seo {
+/* Medical Gradient Icons */
+.card__icon--medical {
+  background: linear-gradient(135deg, var(--clr-primary) 0%, var(--clr-secondary) 100%);
+  box-shadow: 0 8px 20px rgba(21, 94, 99, 0.3);
+  transition: var(--transition);
+}
+
+.card__icon--medical:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 30px rgba(21, 94, 99, 0.4);
+}
+
+/* Different gradient variations for variety */
+.card__icon--medical:nth-child(1) {
   background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
   box-shadow: 0 8px 20px rgba(102, 126, 234, 0.3);
 }
 
-.card__icon--seo::before {
-  content: '';
-  width: 24px;
-  height: 24px;
-  border: 3px solid white;
-  border-radius: 50%;
-  border-top: 3px solid transparent;
-  position: relative;
-}
-
-.card__icon--seo::after {
-  content: '';
-  width: 8px;
-  height: 8px;
-  background: white;
-  border-radius: 50%;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
-.card__icon--ads {
+.card__icon--medical:nth-child(2) {
   background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
   box-shadow: 0 8px 20px rgba(240, 147, 251, 0.3);
 }
 
-.card__icon--ads::before {
-  content: '';
-  width: 20px;
-  height: 20px;
-  border: 3px solid white;
-  border-radius: 3px;
-  position: relative;
-}
-
-.card__icon--ads::after {
-  content: '';
-  width: 6px;
-  height: 6px;
-  background: white;
-  border-radius: 50%;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  box-shadow: -8px -8px 0 white, 8px -8px 0 white, -8px 8px 0 white, 8px 8px 0 white;
-}
-
-.card__icon--web {
+.card__icon--medical:nth-child(3) {
   background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
   box-shadow: 0 8px 20px rgba(79, 172, 254, 0.3);
 }
 
-.card__icon--web::before {
-  content: '';
-  width: 28px;
-  height: 20px;
-  border: 3px solid white;
-  border-radius: 4px;
-  position: relative;
+.card__icon--medical:nth-child(4) {
+  background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);
+  box-shadow: 0 8px 20px rgba(67, 233, 123, 0.3);
 }
 
-.card__icon--web::after {
-  content: '';
-  width: 20px;
-  height: 2px;
-  background: white;
-  position: absolute;
-  top: 35%;
-  left: 50%;
-  transform: translateX(-50%);
-  box-shadow: 0 4px 0 white, 0 8px 0 white;
-}
-
-.card__icon--social {
+.card__icon--medical:nth-child(5) {
   background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);
   box-shadow: 0 8px 20px rgba(250, 112, 154, 0.3);
 }
 
-.card__icon--social::before {
-  content: '';
-  width: 16px;
-  height: 16px;
-  background: white;
-  border-radius: 50%;
-  position: relative;
-}
-
-.card__icon--social::after {
-  content: '';
-  width: 8px;
-  height: 8px;
-  background: white;
-  border-radius: 50%;
-  position: absolute;
-  top: 45%;
-  right: 35%;
-  box-shadow: -12px 6px 0 -2px white, 12px 6px 0 -2px white;
-}
-
-.card__icon--reputation {
+.card__icon--medical:nth-child(6) {
   background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
   box-shadow: 0 8px 20px rgba(168, 237, 234, 0.3);
-}
-
-.card__icon--reputation::before {
-  content: '';
-  width: 0;
-  height: 0;
-  border-left: 8px solid transparent;
-  border-right: 8px solid transparent;
-  border-bottom: 12px solid white;
-  position: relative;
-  transform: rotate(0deg);
-}
-
-.card__icon--reputation::after {
-  content: '';
-  width: 0;
-  height: 0;
-  border-left: 6px solid transparent;
-  border-right: 6px solid transparent;
-  border-bottom: 9px solid white;
-  position: absolute;
-  top: 60%;
-  left: 30%;
-  transform: rotate(72deg);
-  box-shadow: 
-    12px 0px 0 -3px white,
-    7px 9px 0 -3px white,
-    -7px 9px 0 -3px white,
-    -12px 0px 0 -3px white;
-}
-
-.card__icon--funnel {
-  background: linear-gradient(135deg, #d299c2 0%, #fef9d7 100%);
-  box-shadow: 0 8px 20px rgba(210, 153, 194, 0.3);
-}
-
-.card__icon--funnel::before {
-  content: '';
-  width: 24px;
-  height: 8px;
-  background: white;
-  border-radius: 4px 4px 0 0;
-  position: relative;
-}
-
-.card__icon--funnel::after {
-  content: '';
-  width: 16px;
-  height: 6px;
-  background: white;
-  border-radius: 0 0 3px 3px;
-  position: absolute;
-  top: 60%;
-  left: 50%;
-  transform: translateX(-50%);
-  box-shadow: 0 -8px 0 4px white;
 }
 
 .card__title {
@@ -773,36 +647,12 @@ a:hover, a:focus {
   align-items: center;
   justify-content: center;
   color: white;
-  font-size: 0;
+  font-size: 2rem;
   text-decoration: none;
   box-shadow: 0 8px 25px rgba(37, 211, 102, 0.4);
   z-index: 999;
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   border: 3px solid white;
-}
-
-.whatsapp-sticky::before {
-  content: '';
-  width: 32px;
-  height: 32px;
-  background: white;
-  border-radius: 50%;
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.whatsapp-sticky::after {
-  content: '';
-  width: 20px;
-  height: 20px;
-  background: url("data:image/svg+xml,%3Csvg viewBox='0 0 24 24' fill='%2325D366'%3E%3Cpath d='M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91S17.5 2 12.04 2zm4.52 7.79l-1.93 2.21c-.15.17-.37.24-.58.17-.32-.11-.66-.25-.98-.42-1.57-.85-2.73-2.01-3.58-3.58-.17-.32-.31-.66-.42-.98-.07-.21 0-.43.17-.58l2.21-1.93c.19-.17.21-.46.06-.67l-1.13-1.58c-.12-.17-.33-.23-.51-.15l-1.48.67c-.46.21-.77.65-.82 1.15-.08.8.05 1.58.35 2.3.72 1.75 2.12 3.15 3.87 3.87.72.3 1.5.43 2.3.35.5-.05.94-.36 1.15-.82l.67-1.48c.08-.18.02-.39-.15-.51l-1.58-1.13c-.21-.15-.5-.13-.67.06z'/%3E%3C/svg%3E") no-repeat center;
-  background-size: contain;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
 }
 
 .whatsapp-sticky:hover {
