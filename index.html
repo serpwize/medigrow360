@@ -445,10 +445,20 @@
         const nav = document.querySelector('.nav');
         
         if (navToggle && nav) {
-            navToggle.addEventListener('click', function() {
+            navToggle.addEventListener('click', function(e) {
+                e.preventDefault();
                 nav.classList.toggle('nav--open');
                 const isOpen = nav.classList.contains('nav--open');
                 navToggle.setAttribute('aria-expanded', isOpen);
+            });
+            
+            // Close menu when clicking on nav links
+            const navLinks = nav.querySelectorAll('.nav__link');
+            navLinks.forEach(link => {
+                link.addEventListener('click', function() {
+                    nav.classList.remove('nav--open');
+                    navToggle.setAttribute('aria-expanded', 'false');
+                });
             });
         }
     })();
