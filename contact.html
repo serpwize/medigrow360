@@ -516,11 +516,27 @@
         const nav = document.querySelector('.nav');
         
         if (navToggle && nav) {
-            navToggle.addEventListener('click', function() {
+             // Debug log
+            
+            navToggle.addEventListener('click', function(e) {
+                e.preventDefault();
+                 // Debug log
                 nav.classList.toggle('nav--open');
                 const isOpen = nav.classList.contains('nav--open');
                 navToggle.setAttribute('aria-expanded', isOpen);
+                 // Debug log
             });
+            
+            // Close menu when clicking on nav links
+            const navLinks = nav.querySelectorAll('.nav__link');
+            navLinks.forEach(link => {
+                link.addEventListener('click', function() {
+                    nav.classList.remove('nav--open');
+                    navToggle.setAttribute('aria-expanded', 'false');
+                });
+            });
+        } else {
+             // Debug log
         }
     })();
     </script>
