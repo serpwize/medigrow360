@@ -220,6 +220,19 @@ a:hover, a:focus {
 }
 
 @media (max-width: 768px) {
+  .header__container {
+    padding: var(--space-sm) var(--space-md);
+  }
+  
+  .logo {
+    font-size: 1.25rem;
+  }
+  
+  /* Hide Request Proposal button on mobile */
+  .header .btn--primary {
+    display: none;
+  }
+  
   .nav {
     position: fixed;
     top: 100%;
@@ -243,6 +256,31 @@ a:hover, a:focus {
   
   .nav-toggle {
     display: block;
+    padding: var(--space-xs);
+  }
+  
+  /* Mobile-only CTA link */
+  .nav__link--mobile-cta {
+    display: block;
+    background: var(--clr-primary);
+    color: var(--clr-surface) !important;
+    padding: var(--space-sm) var(--space-lg);
+    border-radius: var(--radius);
+    font-weight: 600;
+    text-align: center;
+    margin-top: var(--space-md);
+  }
+  
+  .nav__link--mobile-cta:hover {
+    background: var(--clr-secondary);
+    color: var(--clr-surface) !important;
+  }
+}
+
+/* Hide mobile CTA on desktop */
+@media (min-width: 769px) {
+  .nav__link--mobile-cta {
+    display: none;
   }
 }
 
