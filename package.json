@@ -1,0 +1,13 @@
+{
+  "name": "medigrow360-website",
+  "version": "1.0.0",
+  "description": "MediGrow360 Healthcare Digital Marketing Website",
+  "scripts": {
+    "dev": "npx serve . -p 3000",
+    "build": "echo 'Static site - no build needed'",
+    "preview": "npx serve . -p 4173"
+  },
+  "keywords": ["healthcare", "digital-marketing", "static-website"],
+  "author": "MediGrow360",
+  "license": "MIT"
+}
