@@ -174,8 +174,34 @@
 - **Address**: Maharashtra, India
 - **Hours**: Mon-Sat 9:00 AM - 7:00 PM
 
+## Recent Updates
+
+### 🔧 Critical UI Fixes - September 18, 2025
+**Fixed three major issues identified by user testing:**
+
+1. **✅ Case Studies Text Visibility Issue**
+   - **Problem**: Text in case studies section was not visible despite styling attempts
+   - **Solution**: Implemented aggressive CSS styling with high contrast colors, forced visibility with `!important` declarations
+   - **Improvements**: Enhanced all case study elements (titles, results, highlights) with proper background colors and text contrast
+
+2. **✅ FAQ Accordion Functionality**
+   - **Problem**: + buttons were not opening/closing FAQ answers when clicked
+   - **Solution**: Fixed JavaScript event handling and added proper CSS animations
+   - **Features**: Smooth expand/collapse transitions, proper aria-expanded handling, one-at-a-time accordion behavior
+
+3. **✅ Auto-Scrolling Logo Animations**
+   - **Problem**: Client logos and press mentions sections lacked auto-scrolling effect
+   - **Solution**: Implemented seamless horizontal scrolling animations with CSS keyframes
+   - **Features**: Continuous loop scrolling, hover pause functionality, gradient fade masks, duplicate logo sets for seamless effect
+
+### 🎨 Additional Enhancements
+- **Enhanced Responsive Design**: All sections now properly adapt to mobile/tablet/desktop
+- **Shimmer Effects**: Added subtle animation effects to logo placeholders
+- **Accessibility Improvements**: Enhanced ARIA labels and keyboard navigation
+- **Performance Optimizations**: Smooth animations optimized for all devices
+
 ## Last Updated
-September 18, 2025 - Added complete trust-building framework with client logos, case studies, awards, team profiles, FAQ accordion, and press mentions
+September 18, 2025 - Fixed critical UI issues: case studies visibility, FAQ accordions, auto-scrolling logos
 
 ---
 
