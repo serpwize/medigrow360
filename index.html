@@ -101,18 +101,33 @@
     
     <!-- Main Content -->
     <main class="main" id="main-content" role="main">
-        <!-- Hero Section -->
-        <section class="hero" aria-labelledby="hero-title">
-            <div class="container">
-                <h1 id="hero-title" class="hero__title">
-                    Grow Your Healthcare Practice with Digital Marketing that Works
-                </h1>
-                <p class="hero__subtitle">
-                    Trusted by doctors, clinics, and hospitals across India to attract more patients, build online reputation, and increase revenue through proven digital marketing strategies.
-                </p>
-                <div class="hero__cta">
-                    <a href="/contact.html" class="btn btn--accent btn--large">Request Free Proposal</a>
-                    <a href="/resources.html" class="btn btn--secondary btn--large">Get Free Audit</a>
+        <!-- Hero Section with Video Background -->
+        <section class="hero hero--video" aria-labelledby="hero-title">
+            <!-- Video Background -->
+            <div class="hero__video-container">
+                <video class="hero__video" autoplay muted loop playsinline preload="metadata">
+                    <source src="https://medigrow360.com/hero-video.mp4" type="video/mp4">
+                    <!-- Fallback for browsers that don't support video -->
+                    <div class="hero__video-fallback"></div>
+                </video>
+            </div>
+            
+            <!-- Overlay for text visibility -->
+            <div class="hero__overlay"></div>
+            
+            <!-- Content -->
+            <div class="hero__content">
+                <div class="container">
+                    <h1 id="hero-title" class="hero__title">
+                        Grow Your Healthcare Practice with Digital Marketing that Works
+                    </h1>
+                    <p class="hero__subtitle">
+                        Trusted by doctors, clinics, and hospitals across India to attract more patients, build online reputation, and increase revenue through proven digital marketing strategies.
+                    </p>
+                    <div class="hero__cta">
+                        <a href="/contact.html" class="btn btn--accent btn--large">Request Free Proposal</a>
+                        <a href="/resources.html" class="btn btn--secondary btn--large">Get Free Audit</a>
+                    </div>
                 </div>
             </div>
         </section>
