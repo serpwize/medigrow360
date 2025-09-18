@@ -1306,12 +1306,29 @@ img {
 }
 
 .client-logos {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-  gap: var(--space-xl);
+  display: flex;
+  gap: var(--space-xxl);
   align-items: center;
   margin-top: var(--space-xl);
   opacity: 0.7;
+  overflow-x: auto;
+  padding: var(--space-md) 0;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+}
+
+.client-logos::-webkit-scrollbar {
+  height: 4px;
+}
+
+.client-logos::-webkit-scrollbar-track {
+  background: rgba(21, 94, 99, 0.1);
+  border-radius: 2px;
+}
+
+.client-logos::-webkit-scrollbar-thumb {
+  background: var(--clr-primary);
+  border-radius: 2px;
 }
 
 .client-logo {
@@ -1319,6 +1336,8 @@ img {
   justify-content: center;
   align-items: center;
   height: 80px;
+  min-width: 150px;
+  flex-shrink: 0;
   transition: var(--transition);
 }
 
@@ -1362,20 +1381,9 @@ img {
    ============================================================================ */
 
 .section--case-studies {
-  background: linear-gradient(135deg, #F8FFFE 0%, #F0F9FF 100%);
-  position: relative;
-  overflow: hidden;
-}
-
-.section--case-studies::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23155E63' fill-opacity='0.02'%3E%3Ccircle cx='40' cy='40' r='2'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E") repeat;
-  pointer-events: none;
+  background: #FFFFFF;
+  border-top: 1px solid #E9ECEF;
+  border-bottom: 1px solid #E9ECEF;
 }
 
 .case-studies-grid {
@@ -1386,37 +1394,43 @@ img {
 }
 
 .case-study {
-  background: var(--clr-surface);
+  background: #FFFFFF;
   padding: var(--space-xl);
   border-radius: var(--radius);
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
-  border: 1px solid rgba(21, 94, 99, 0.1);
+  box-shadow: 0 8px 30px rgba(21, 94, 99, 0.12);
+  border: 2px solid rgba(21, 94, 99, 0.08);
   transition: var(--transition);
   position: relative;
 }
 
 .case-study:hover {
   transform: translateY(-6px);
-  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 16px 50px rgba(21, 94, 99, 0.20);
   border-color: var(--clr-primary);
 }
 
 .case-study__header {
   margin-bottom: var(--space-lg);
+  padding-bottom: var(--space-md);
+  border-bottom: 2px solid rgba(21, 94, 99, 0.1);
 }
 
 .case-study__title {
-  font-size: 1.375rem;
+  font-size: 1.5rem;
   font-weight: 700;
-  color: var(--clr-text);
-  margin-bottom: var(--space-xs);
+  color: #2F3E46;
+  margin-bottom: var(--space-sm);
   font-family: var(--font-heading);
 }
 
 .case-study__specialty {
-  color: var(--clr-primary);
+  background: linear-gradient(135deg, var(--clr-primary), var(--clr-secondary));
+  color: white;
+  padding: var(--space-xs) var(--space-md);
+  border-radius: 20px;
   font-weight: 600;
   font-size: 0.9rem;
+  display: inline-block;
 }
 
 .case-study__results {
@@ -1428,9 +1442,10 @@ img {
   align-items: center;
   justify-content: space-between;
   margin-bottom: var(--space-md);
-  background: rgba(21, 94, 99, 0.03);
-  padding: var(--space-md);
-  border-radius: var(--space-sm);
+  background: #F8FFFE;
+  padding: var(--space-lg);
+  border-radius: var(--space-md);
+  border: 1px solid rgba(21, 94, 99, 0.15);
 }
 
 .result__before, .result__after {
@@ -1440,31 +1455,36 @@ img {
 
 .result__label {
   display: block;
-  font-size: 0.8rem;
-  color: var(--clr-muted);
-  font-weight: 500;
+  font-size: 0.85rem;
+  color: #6B7280;
+  font-weight: 600;
   text-transform: uppercase;
-  letter-spacing: 0.5px;
-  margin-bottom: 4px;
+  letter-spacing: 0.8px;
+  margin-bottom: 6px;
 }
 
 .result__number {
   display: block;
-  font-size: 1.75rem;
+  font-size: 2rem;
   font-weight: 700;
-  color: var(--clr-text);
+  color: #2F3E46;
   font-family: var(--font-heading);
-  margin-bottom: 2px;
+  margin-bottom: 4px;
 }
 
 .result__after .result__number {
-  color: var(--clr-primary);
+  color: #155E63;
+  background: linear-gradient(135deg, #155E63 0%, #0E2A47 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
 .result__metric {
   display: block;
-  font-size: 0.85rem;
-  color: var(--clr-muted);
+  font-size: 0.9rem;
+  color: #6B7280;
+  font-weight: 500;
 }
 
 .result__arrow {
@@ -1758,13 +1778,16 @@ img {
 }
 
 .faq__answer {
-  padding: 0 var(--space-lg) var(--space-lg);
+  max-height: 0;
+  overflow: hidden;
+  padding: 0 var(--space-lg);
   background: rgba(21, 94, 99, 0.02);
-  display: none;
+  transition: max-height 0.3s ease, padding 0.3s ease;
 }
 
 .faq__toggle[aria-expanded="true"] + .faq__answer {
-  display: block;
+  max-height: 500px;
+  padding: var(--space-md) var(--space-lg) var(--space-lg);
 }
 
 .faq__answer p {
@@ -1783,12 +1806,29 @@ img {
 }
 
 .press-logos {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
-  gap: var(--space-xl);
+  display: flex;
+  gap: var(--space-xxl);
   align-items: center;
   margin-top: var(--space-xl);
   opacity: 0.6;
+  overflow-x: auto;
+  padding: var(--space-md) 0;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+}
+
+.press-logos::-webkit-scrollbar {
+  height: 4px;
+}
+
+.press-logos::-webkit-scrollbar-track {
+  background: rgba(21, 94, 99, 0.1);
+  border-radius: 2px;
+}
+
+.press-logos::-webkit-scrollbar-thumb {
+  background: var(--clr-primary);
+  border-radius: 2px;
 }
 
 .press-logo {
@@ -1796,6 +1836,8 @@ img {
   justify-content: center;
   align-items: center;
   height: 60px;
+  min-width: 140px;
+  flex-shrink: 0;
   transition: var(--transition);
 }
 
@@ -1833,8 +1875,11 @@ img {
 /* Responsive Design for New Sections */
 @media (max-width: 768px) {
   .client-logos {
-    grid-template-columns: repeat(2, 1fr);
     gap: var(--space-lg);
+  }
+  
+  .client-logo {
+    min-width: 120px;
   }
   
   .case-studies-grid {
@@ -1871,8 +1916,11 @@ img {
   }
   
   .press-logos {
-    grid-template-columns: repeat(2, 1fr);
     gap: var(--space-lg);
+  }
+  
+  .press-logo {
+    min-width: 120px;
   }
   
   .faq__toggle {
@@ -1887,8 +1935,11 @@ img {
 
 @media (max-width: 480px) {
   .client-logos, .press-logos {
-    grid-template-columns: 1fr;
     gap: var(--space-md);
+  }
+  
+  .client-logo, .press-logo {
+    min-width: 100px;
   }
   
   .case-study__title {
