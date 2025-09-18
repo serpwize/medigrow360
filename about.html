@@ -28,6 +28,61 @@
     <link rel="stylesheet" href="assets/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
+    <!-- About Page Specific Styles -->
+    <style>
+        /* Improved section spacing for About page */
+        .section + .section {
+            margin-top: 2rem;
+        }
+        
+        /* Better card spacing in grid layouts */
+        .grid .card {
+            margin-bottom: 1.5rem;
+        }
+        
+        /* Ensure section headers have proper spacing */
+        .section__header {
+            margin-bottom: 2.5rem;
+        }
+        
+        /* Better icon sizing for consistency */
+        .card__icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            display: block;
+        }
+        
+        /* Improved text alignment for expertise cards */
+        .card.text-center {
+            text-align: center;
+        }
+        
+        .card.text-center .card__title {
+            margin-top: 0.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        /* Better spacing for trust elements */
+        .trust-grid {
+            margin-top: 3rem;
+        }
+        
+        /* Ensure proper section boundaries */
+        .section--alt {
+            position: relative;
+        }
+        
+        .section--alt::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 1px;
+            background: rgba(0,0,0,0.05);
+        }
+    </style>
+    
     <!-- Structured Data -->
     <script type="application/ld+json">
     {
@@ -103,19 +158,46 @@
                     <a href="/contact.html" class="btn btn--accent btn--large">Work With Us</a>
                     <a href="/case-studies.html" class="btn btn--secondary btn--large">See Our Results</a>
                 </div>
+                
+                <!-- Trust Strip (Below buttons for better visibility) -->
+                <div class="trust-badges-inline">
+                    <div class="trust-badge-inline">
+                        <i class="fas fa-shield-alt" aria-hidden="true"></i>
+                        <span>HIPAA Compliant</span>
+                    </div>
+                    <div class="trust-badge-inline">
+                        <i class="fas fa-users-cog" aria-hidden="true"></i>
+                        <span>150+ Healthcare Clients</span>
+                    </div>
+                    <div class="trust-badge-inline">
+                        <i class="fas fa-award" aria-hidden="true"></i>
+                        <span>Google Premier Partner</span>
+                    </div>
+                    <div class="trust-badge-inline">
+                        <i class="fas fa-certificate" aria-hidden="true"></i>
+                        <span>Healthcare Marketing Specialists</span>
+                    </div>
+                </div>
+                
+                <!-- Rating Strip -->
+                <div class="reviews-badge" style="justify-content: center; margin: 1rem 0;">
+                    <span class="stars">★★★★★</span>
+                    <span class="rating-text">4.9/5</span>
+                    <span>based on 50+ Google reviews</span>
+                </div>
             </div>
         </section>
         
         <!-- Our Mission -->
-        <section class="section" aria-labelledby="mission-title">
+        <section class="section" aria-labelledby="mission-title" style="padding: 4rem 0;">
             <div class="container">
-                <div class="grid grid--2">
+                <div class="grid grid--2" style="gap: 3rem; align-items: start;">
                     <div>
-                        <h2 id="mission-title">Our Mission</h2>
-                        <p class="lead">
+                        <h2 id="mission-title" style="margin-bottom: 1.5rem;">Our Mission</h2>
+                        <p class="lead" style="margin-bottom: 1.5rem;">
                             To empower healthcare professionals across India with digital marketing solutions that not only drive growth but also maintain the highest standards of medical ethics and compliance.
                         </p>
-                        <p>
+                        <p style="margin-bottom: 1rem;">
                             We understand the unique challenges healthcare professionals face when marketing their services. From strict regulatory requirements to the sensitive nature of patient relationships, healthcare marketing requires a specialized approach that balances growth with responsibility.
                         </p>
                         <p>
@@ -124,20 +206,20 @@
                     </div>
                     
                     <div>
-                        <div class="card">
-                            <h3 class="card__title">Why Healthcare-Focused?</h3>
+                        <div class="card" style="height: fit-content;">
+                            <h3 class="card__title" style="margin-bottom: 1.5rem;">Why Healthcare-Focused?</h3>
                             <div class="card__content">
                                 <ul style="list-style: none; padding: 0;">
-                                    <li style="margin-bottom: 0.75rem;">
+                                    <li style="margin-bottom: 1rem;">
                                         <strong>📋 Compliance First:</strong> We ensure all marketing activities adhere to medical advertising guidelines and patient privacy laws.
                                     </li>
-                                    <li style="margin-bottom: 0.75rem;">
+                                    <li style="margin-bottom: 1rem;">
                                         <strong>🎯 Industry Expertise:</strong> Our team understands medical terminology, patient journey, and healthcare decision-making processes.
                                     </li>
-                                    <li style="margin-bottom: 0.75rem;">
+                                    <li style="margin-bottom: 1rem;">
                                         <strong>🤝 Trust-Building:</strong> We focus on building authentic patient relationships rather than aggressive sales tactics.
                                     </li>
-                                    <li style="margin-bottom: 0.75rem;">
+                                    <li style="margin-bottom: 1rem;">
                                         <strong>📊 Measurable Results:</strong> Track patient acquisition, appointment bookings, and practice growth with healthcare-specific KPIs.
                                     </li>
                                 </ul>
@@ -149,18 +231,18 @@
         </section>
         
         <!-- Our Story -->
-        <section class="section section--alt" aria-labelledby="story-title">
+        <section class="section section--alt" aria-labelledby="story-title" style="padding: 4rem 0;">
             <div class="container">
-                <div class="section__header">
+                <div class="section__header text-center">
                     <h2 id="story-title">Our Story</h2>
                     <p class="section__subtitle">
                         Founded by digital marketing professionals with healthcare industry experience, MediGrow360 was born from a simple observation: healthcare deserves better marketing.
                     </p>
                 </div>
                 
-                <div class="grid grid--3">
-                    <article class="card">
-                        <div class="card__icon" aria-hidden="true">💡</div>
+                <div class="grid grid--3" style="margin-top: 3rem;">
+                    <article class="card text-center">
+                        <div class="card__icon" aria-hidden="true" style="font-size: 2.5rem; margin-bottom: 1rem;">💡</div>
                         <h3 class="card__title">The Problem We Saw</h3>
                         <div class="card__content">
                             <p>
@@ -169,8 +251,8 @@
                         </div>
                     </article>
                     
-                    <article class="card">
-                        <div class="card__icon" aria-hidden="true">🎯</div>
+                    <article class="card text-center">
+                        <div class="card__icon" aria-hidden="true" style="font-size: 2.5rem; margin-bottom: 1rem;">🎯</div>
                         <h3 class="card__title">Our Solution</h3>
                         <div class="card__content">
                             <p>
@@ -179,12 +261,12 @@
                         </div>
                     </article>
                     
-                    <article class="card">
-                        <div class="card__icon" aria-hidden="true">📈</div>
+                    <article class="card text-center">
+                        <div class="card__icon" aria-hidden="true" style="font-size: 2.5rem; margin-bottom: 1rem;">📈</div>
                         <h3 class="card__title">The Results</h3>
                         <div class="card__content">
                             <p>
-                                Today, we're proud to have helped 100+ healthcare practices grow their patient base by an average of 300% while maintaining the highest standards of professional ethics and compliance.
+                                Today, we're proud to have helped 150+ healthcare practices grow their patient base by an average of 300% while maintaining the highest standards of professional ethics and compliance.
                             </p>
                         </div>
                     </article>
@@ -193,18 +275,18 @@
         </section>
         
         <!-- Our Values -->
-        <section class="section" aria-labelledby="values-title">
+        <section class="section" aria-labelledby="values-title" style="margin-bottom: 2rem;">
             <div class="container">
-                <div class="section__header">
+                <div class="section__header text-center">
                     <h2 id="values-title">Our Core Values</h2>
                     <p class="section__subtitle">
                         These principles guide everything we do and ensure our clients receive not just effective marketing, but ethical marketing.
                     </p>
                 </div>
                 
-                <div class="grid grid--2">
+                <div class="grid grid--2" style="margin-top: 3rem;">
                     <div>
-                        <div class="card">
+                        <div class="card" style="margin-bottom: 2rem;">
                             <h3 class="card__title">🔒 Compliance-First Approach</h3>
                             <div class="card__content">
                                 <p>
@@ -224,7 +306,7 @@
                     </div>
                     
                     <div>
-                        <div class="card">
+                        <div class="card" style="margin-bottom: 2rem;">
                             <h3 class="card__title">🤝 Transparent Partnership</h3>
                             <div class="card__content">
                                 <p>
@@ -247,18 +329,18 @@
         </section>
         
         <!-- Team Expertise -->
-        <section class="section section--alt" aria-labelledby="expertise-title">
+        <section class="section section--alt" aria-labelledby="expertise-title" style="margin-top: 4rem;">
             <div class="container">
-                <div class="section__header">
+                <div class="section__header text-center">
                     <h2 id="expertise-title">Our Expertise</h2>
                     <p class="section__subtitle">
                         Our team combines digital marketing expertise with deep healthcare industry knowledge to deliver results that matter.
                     </p>
                 </div>
                 
-                <div class="grid grid--4">
+                <div class="grid grid--2" style="margin-top: 3rem;">
                     <div class="card text-center">
-                        <div class="card__icon" aria-hidden="true">🎓</div>
+                        <div class="card__icon" aria-hidden="true" style="font-size: 2.5rem; margin-bottom: 1rem;">🎓</div>
                         <h3 class="card__title">Healthcare Marketing Certified</h3>
                         <div class="card__content">
                             <p>Team members hold certifications in healthcare marketing, medical ethics, and patient privacy regulations.</p>
@@ -266,7 +348,7 @@
                     </div>
                     
                     <div class="card text-center">
-                        <div class="card__icon" aria-hidden="true">🏥</div>
+                        <div class="card__icon" aria-hidden="true" style="font-size: 2.5rem; margin-bottom: 1rem;">🏥</div>
                         <h3 class="card__title">Medical Industry Experience</h3>
                         <div class="card__content">
                             <p>Combined 15+ years of experience working directly with hospitals, clinics, and medical professionals.</p>
@@ -274,7 +356,7 @@
                     </div>
                     
                     <div class="card text-center">
-                        <div class="card__icon" aria-hidden="true">📊</div>
+                        <div class="card__icon" aria-hidden="true" style="font-size: 2.5rem; margin-bottom: 1rem;">📊</div>
                         <h3 class="card__title">Data-Driven Approach</h3>
                         <div class="card__content">
                             <p>Advanced analytics and healthcare-specific KPI tracking to measure and optimize campaign performance.</p>
@@ -282,7 +364,7 @@
                     </div>
                     
                     <div class="card text-center">
-                        <div class="card__icon" aria-hidden="true">🔄</div>
+                        <div class="card__icon" aria-hidden="true" style="font-size: 2.5rem; margin-bottom: 1rem;">🔄</div>
                         <h3 class="card__title">Continuous Optimization</h3>
                         <div class="card__content">
                             <p>Regular testing, analysis, and refinement to ensure your marketing investment delivers maximum ROI.</p>
@@ -292,16 +374,198 @@
             </div>
         </section>
         
+        <!-- Trust Stats Section -->
+        <section class="section section--trust" aria-labelledby="trust-stats-title">
+            <div class="container">
+                <div class="section__header text-center">
+                    <h2 id="trust-stats-title">Trusted by Healthcare Professionals Across India</h2>
+                    <p class="section__subtitle">
+                        Our results speak for themselves. See why medical professionals choose MediGrow360 for their digital marketing needs.
+                    </p>
+                </div>
+                
+                <div class="trust-grid">
+                    <!-- Trust Stats -->
+                    <div class="trust-stats">
+                        <div class="stat">
+                            <div class="stat__number">150+</div>
+                            <div class="stat__label">Healthcare Clients</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat__number">300%</div>
+                            <div class="stat__label">Avg Growth Rate</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat__number">5+</div>
+                            <div class="stat__label">Years Experience</div>
+                        </div>
+                    </div>
+                    
+                    <!-- Trust Badges -->
+                    <div class="trust-badges">
+                        <h3 class="trust-badges__title">Certified & Recognized</h3>
+                        
+                        <div class="badges-grid">
+                            <div class="badge">
+                                <div class="badge__icon badge__icon--hipaa" aria-hidden="true"></div>
+                                <div class="badge__content">
+                                    <h4 class="badge__title">HIPAA Certified</h4>
+                                    <p class="badge__description">Compliance Verified</p>
+                                </div>
+                            </div>
+                            
+                            <div class="badge">
+                                <div class="badge__icon badge__icon--google" aria-hidden="true"></div>
+                                <div class="badge__content">
+                                    <h4 class="badge__title">Google Partners</h4>
+                                    <p class="badge__description">Premier Certified</p>
+                                </div>
+                            </div>
+                            
+                            <div class="badge">
+                                <div class="badge__icon badge__icon--healthcare" aria-hidden="true"></div>
+                                <div class="badge__content">
+                                    <h4 class="badge__title">Healthcare Marketing</h4>
+                                    <p class="badge__description">Specialist Focus</p>
+                                </div>
+                            </div>
+                            
+                            <div class="badge">
+                                <div class="badge__icon badge__icon--security" aria-hidden="true"></div>
+                                <div class="badge__content">
+                                    <h4 class="badge__title">Data Security</h4>
+                                    <p class="badge__description">SOC 2 Compliant</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Testimonials Section -->
+        <section class="section" aria-labelledby="testimonials-title">
+            <div class="container">
+                <div class="section__header text-center">
+                    <h2 id="testimonials-title">What Healthcare Professionals Say About Us</h2>
+                    <p class="section__subtitle">
+                        Real feedback from medical professionals who have transformed their practice with our help.
+                    </p>
+                </div>
+                
+                <div class="grid grid--2">
+                    <article class="testimonial">
+                        <blockquote class="testimonial__content">
+                            "Working with MediGrow360 has been transformational for our practice. Their team understands healthcare marketing like no other agency we've worked with. They're true partners in our growth."
+                        </blockquote>
+                        <footer>
+                            <cite class="testimonial__author">Dr. Anita Gupta</cite>
+                            <div class="testimonial__role">Hospital Administrator, Delhi</div>
+                        </footer>
+                    </article>
+                    
+                    <article class="testimonial">
+                        <blockquote class="testimonial__content">
+                            "The level of compliance and professionalism MediGrow360 brings to healthcare marketing is exceptional. They helped us grow ethically and sustainably while maintaining our reputation."
+                        </blockquote>
+                        <footer>
+                            <cite class="testimonial__author">Dr. Rajesh Kumar</cite>
+                            <div class="testimonial__role">Cardiologist, Mumbai</div>
+                        </footer>
+                    </article>
+                </div>
+            </div>
+        </section>
+        
         <!-- Mid-Page CTA -->
-        <section class="section text-center" aria-label="Call to action">
+        <section class="section section--alt text-center" aria-label="Call to action">
             <div class="container">
                 <h2>Ready to Partner with Healthcare Marketing Specialists?</h2>
                 <p class="lead">
-                    Join 100+ healthcare professionals who trust MediGrow360 to grow their practice while maintaining the highest standards of professional ethics.
+                    Join 150+ healthcare professionals who trust MediGrow360 to grow their practice while maintaining the highest standards of professional ethics.
                 </p>
                 <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; margin-top: 2rem;">
                     <a href="/contact.html" class="btn btn--primary btn--large">Schedule Consultation</a>
                     <a href="/case-studies.html" class="btn btn--secondary btn--large">View Case Studies</a>
+                </div>
+                
+                <!-- Trust Signals below buttons for better visibility -->
+                <div class="privacy-guarantee" style="margin-top: 1rem;">
+                    <i class="fas fa-shield-alt"></i>
+                    <span>HIPAA Compliant & 100% Confidential</span>
+                </div>
+                
+                <div class="reviews-badge" style="justify-content: center; margin-top: 0.5rem;">
+                    <span class="stars">★★★★★</span>
+                    <span class="rating-text">4.9/5</span>
+                    <span>rated by healthcare professionals</span>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Client Logos Section -->
+        <section class="section section--clients" aria-labelledby="clients-title">
+            <div class="container">
+                <div class="section__header text-center">
+                    <h2 id="clients-title">Trusted by Leading Healthcare Providers</h2>
+                    <p class="section__subtitle">
+                        Over 150+ hospitals, clinics, and healthcare practices trust MediGrow360 for their digital marketing needs.
+                    </p>
+                </div>
+                
+                <div class="client-logos">
+                    <div class="client-logos-track">
+                        <!-- First set of logos -->
+                        <div class="client-logo" aria-label="Apollo Hospitals">
+                            <div class="logo-placeholder logo-placeholder--apollo"></div>
+                        </div>
+                        <div class="client-logo" aria-label="Fortis Healthcare">
+                            <div class="logo-placeholder logo-placeholder--fortis"></div>
+                        </div>
+                        <div class="client-logo" aria-label="Max Healthcare">
+                            <div class="logo-placeholder logo-placeholder--max"></div>
+                        </div>
+                        <div class="client-logo" aria-label="Manipal Hospitals">
+                            <div class="logo-placeholder logo-placeholder--manipal"></div>
+                        </div>
+                        <div class="client-logo" aria-label="Narayana Health">
+                            <div class="logo-placeholder logo-placeholder--narayana"></div>
+                        </div>
+                        <div class="client-logo" aria-label="Cloudnine Hospitals">
+                            <div class="logo-placeholder logo-placeholder--cloudnine"></div>
+                        </div>
+                        <div class="client-logo" aria-label="Aster DM Healthcare">
+                            <div class="logo-placeholder logo-placeholder--aster"></div>
+                        </div>
+                        <div class="client-logo" aria-label="Medanta">
+                            <div class="logo-placeholder logo-placeholder--medanta"></div>
+                        </div>
+                        <!-- Duplicate set for seamless scrolling -->
+                        <div class="client-logo" aria-label="Apollo Hospitals" aria-hidden="true">
+                            <div class="logo-placeholder logo-placeholder--apollo"></div>
+                        </div>
+                        <div class="client-logo" aria-label="Fortis Healthcare" aria-hidden="true">
+                            <div class="logo-placeholder logo-placeholder--fortis"></div>
+                        </div>
+                        <div class="client-logo" aria-label="Max Healthcare" aria-hidden="true">
+                            <div class="logo-placeholder logo-placeholder--max"></div>
+                        </div>
+                        <div class="client-logo" aria-label="Manipal Hospitals" aria-hidden="true">
+                            <div class="logo-placeholder logo-placeholder--manipal"></div>
+                        </div>
+                        <div class="client-logo" aria-label="Narayana Health" aria-hidden="true">
+                            <div class="logo-placeholder logo-placeholder--narayana"></div>
+                        </div>
+                        <div class="client-logo" aria-label="Cloudnine Hospitals" aria-hidden="true">
+                            <div class="logo-placeholder logo-placeholder--cloudnine"></div>
+                        </div>
+                        <div class="client-logo" aria-label="Aster DM Healthcare" aria-hidden="true">
+                            <div class="logo-placeholder logo-placeholder--aster"></div>
+                        </div>
+                        <div class="client-logo" aria-label="Medanta" aria-hidden="true">
+                            <div class="logo-placeholder logo-placeholder--medanta"></div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -378,6 +642,18 @@
                             Request Free Consultation
                         </button>
                         
+                        <!-- Trust Signals -->
+                        <div class="privacy-guarantee">
+                            <i class="fas fa-shield-alt"></i>
+                            <span>100% Privacy Guaranteed – We never share your data.</span>
+                        </div>
+                        
+                        <div class="reviews-badge">
+                            <span class="stars">★★★★★</span>
+                            <span class="rating-text">4.9/5</span>
+                            <span>based on 150+ healthcare professionals</span>
+                        </div>
+                        
                         <p class="muted text-center">
                             We'll respond within 24 hours with a customized growth strategy for your practice.
                         </p>
@@ -443,6 +719,15 @@
         </div>
     </footer>
     
+    <!-- Sticky CTA -->
+    <div class="sticky-cta" id="sticky-cta" aria-hidden="true">
+        <div class="sticky-cta__content">
+            <span class="sticky-cta__text">Ready to work with healthcare marketing experts?</span>
+            <a href="/contact.html" class="sticky-cta__button">Schedule Consultation</a>
+            <button class="sticky-cta__close" aria-label="Close sticky banner">×</button>
+        </div>
+    </div>
+    
     <!-- Sticky WhatsApp Button -->
     <a href="https://wa.me/919284959948?text=Hi%20MediGrow360,%20I%20read%20about%20your%20company%20and%20would%20like%20to%20discuss%20healthcare%20marketing%20services%20for%20my%20practice." 
        class="whatsapp-sticky" 
@@ -503,6 +788,61 @@
         } else {
              // Debug log
         }
+        
+        // Sticky CTA functionality
+        function initStickyCTA() {
+            const stickyCTA = document.getElementById('sticky-cta');
+            const closeBtn = stickyCTA?.querySelector('.sticky-cta__close');
+            
+            function showStickyCTA() {
+                if (stickyCTA && !stickyCTA.classList.contains('sticky-cta--dismissed')) {
+                    stickyCTA.style.display = 'block';
+                    stickyCTA.setAttribute('aria-hidden', 'false');
+                    
+                    // Animate in
+                    setTimeout(() => {
+                        stickyCTA.classList.add('sticky-cta--visible');
+                    }, 100);
+                }
+            }
+            
+            function hideStickyCTA() {
+                if (stickyCTA) {
+                    stickyCTA.classList.remove('sticky-cta--visible');
+                    stickyCTA.setAttribute('aria-hidden', 'true');
+                    
+                    setTimeout(() => {
+                        stickyCTA.style.display = 'none';
+                    }, 300);
+                }
+            }
+            
+            // Show after scrolling 50% of page
+            let hasShown = false;
+            function checkScroll() {
+                if (hasShown) return;
+                
+                const scrollPercent = (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
+                if (scrollPercent > 50) {
+                    showStickyCTA();
+                    hasShown = true;
+                }
+            }
+            
+            // Close functionality
+            if (closeBtn) {
+                closeBtn.addEventListener('click', function() {
+                    hideStickyCTA();
+                    stickyCTA?.classList.add('sticky-cta--dismissed');
+                });
+            }
+            
+            // Initialize scroll listener
+            window.addEventListener('scroll', checkScroll, { passive: true });
+        }
+        
+        // Initialize on page load
+        initStickyCTA();
     })();
     </script>
 </body>
