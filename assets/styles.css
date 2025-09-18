@@ -317,6 +317,9 @@ a:hover, a:focus {
   white-space: nowrap;
   position: relative;
   overflow: hidden;
+  line-height: 1.4;
+  word-wrap: break-word;
+  hyphens: auto;
 }
 
 .btn:active {
@@ -1255,6 +1258,83 @@ a:hover, a:focus {
   
   .video-testimonial__description {
     font-size: 0.9rem;
+  }
+}
+
+/* Mobile Responsive Button Fixes */
+@media (max-width: 768px) {
+  .btn {
+    white-space: normal;
+    min-width: auto;
+    width: 100%;
+    max-width: 100%;
+    padding: 0.75rem 1rem;
+    font-size: 0.9rem;
+    line-height: 1.3;
+    word-break: break-word;
+    text-overflow: ellipsis;
+  }
+  
+  .btn--large {
+    padding: 0.875rem 1.25rem;
+    font-size: 1rem;
+    min-width: auto;
+  }
+  
+  .btn--small {
+    padding: 0.625rem 0.875rem;
+    font-size: 0.85rem;
+    min-width: auto;
+  }
+  
+  /* Card buttons specific */
+  .card__link.btn {
+    width: 100%;
+    margin-top: 1rem;
+    padding: 0.75rem 0.5rem;
+    font-size: 0.85rem;
+    line-height: 1.2;
+    white-space: normal;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+  }
+  
+  /* Hero buttons */
+  .hero__cta .btn {
+    max-width: 280px;
+    margin: 0.25rem;
+  }
+  
+  /* Form buttons */
+  .form .btn,
+  form .btn {
+    width: 100%;
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .btn {
+    font-size: 0.85rem;
+    padding: 0.625rem 0.75rem;
+  }
+  
+  .btn--large {
+    font-size: 0.9rem;
+    padding: 0.75rem 1rem;
+  }
+  
+  .card__link.btn {
+    font-size: 0.8rem;
+    padding: 0.625rem 0.5rem;
+    line-height: 1.3;
+  }
+  
+  /* Long button text handling */
+  .btn[class*="Learn More"] {
+    font-size: 0.75rem;
+    padding: 0.5rem 0.25rem;
+    line-height: 1.2;
   }
 }
 
