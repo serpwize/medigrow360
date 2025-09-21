@@ -505,7 +505,7 @@
                 <div class="section__header text-center">
                     <h2 id="clients-title">Trusted by Leading Healthcare Providers</h2>
                     <p class="section__subtitle">
-                        Real healthcare brands we've helped grow. From dental clinics to IVF centers, dermatology practices to eye care specialists.
+                        <strong>Real healthcare brands we've helped grow.</strong> From dental clinics to IVF centers, dermatology practices to eye care specialists - see the trusted names in our portfolio.
                     </p>
                 </div>
                 
@@ -565,27 +565,29 @@
                     </div>
                 </div>
                 
-                <!-- Customer Logo Styles -->
+                <!-- Enhanced Customer Logo Styles for Better Visibility -->
                 <style>
                 .customer-logo-img {
-                    width: 120px;
-                    height: 80px;
+                    width: 160px;
+                    height: 100px;
                     object-fit: contain;
-                    filter: grayscale(100%) brightness(1.2) contrast(0.8);
-                    opacity: 0.7;
-                    transition: all 0.3s ease;
-                    border-radius: 8px;
-                    padding: 10px;
-                    background: rgba(255, 255, 255, 0.9);
-                    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+                    filter: grayscale(80%) brightness(1.1) contrast(1.1);
+                    opacity: 0.85;
+                    transition: all 0.4s ease;
+                    border-radius: 12px;
+                    padding: 15px;
+                    background: white;
+                    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+                    border: 1px solid rgba(21, 94, 99, 0.1);
                 }
                 
                 .client-logo:hover .customer-logo-img {
                     filter: none;
                     opacity: 1;
-                    transform: scale(1.05);
-                    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+                    transform: scale(1.08) translateY(-2px);
+                    box-shadow: 0 8px 25px rgba(21, 94, 99, 0.15);
                     background: white;
+                    border: 1px solid rgba(21, 94, 99, 0.2);
                 }
                 
                 .client-logo {
@@ -593,30 +595,91 @@
                     display: flex;
                     align-items: center;
                     justify-content: center;
-                    margin: 0 1rem;
+                    margin: 0 1.5rem;
                     cursor: pointer;
+                    position: relative;
                 }
                 
-                /* Enhance the scrolling animation */
+                /* Enhanced section styling */
+                .section--clients {
+                    background: linear-gradient(135deg, #F9FBFA 0%, #F3F8F8 100%);
+                    padding: 4rem 0;
+                }
+                
                 .client-logos {
                     overflow: hidden;
-                    padding: 2rem 0;
-                    background: linear-gradient(90deg, transparent 0%, rgba(255,255,255,0.8) 15%, rgba(255,255,255,0.8) 85%, transparent 100%);
+                    padding: 3rem 0;
+                    position: relative;
+                }
+                
+                .client-logos::before,
+                .client-logos::after {
+                    content: '';
+                    position: absolute;
+                    top: 0;
+                    bottom: 0;
+                    width: 100px;
+                    z-index: 2;
+                    pointer-events: none;
+                }
+                
+                .client-logos::before {
+                    left: 0;
+                    background: linear-gradient(90deg, #F9FBFA 0%, transparent 100%);
+                }
+                
+                .client-logos::after {
+                    right: 0;
+                    background: linear-gradient(90deg, transparent 0%, #F9FBFA 100%);
                 }
                 
                 .client-logos-track {
                     display: flex;
-                    animation: scroll-logos 20s linear infinite;
+                    animation: scroll-logos-enhanced 25s linear infinite;
                     width: fit-content;
+                    align-items: center;
                 }
                 
-                @keyframes scroll-logos {
+                @keyframes scroll-logos-enhanced {
                     0% { transform: translateX(0); }
                     100% { transform: translateX(-50%); }
                 }
                 
                 .client-logos:hover .client-logos-track {
                     animation-play-state: paused;
+                }
+                
+                /* Add subtle pulse effect */
+                .client-logo::after {
+                    content: '';
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    width: 0;
+                    height: 0;
+                    background: rgba(21, 94, 99, 0.1);
+                    border-radius: 50%;
+                    transition: all 0.4s ease;
+                    transform: translate(-50%, -50%);
+                    z-index: -1;
+                }
+                
+                .client-logo:hover::after {
+                    width: 120%;
+                    height: 120%;
+                }
+                
+                /* Responsive adjustments */
+                @media (max-width: 768px) {
+                    .customer-logo-img {
+                        width: 140px;
+                        height: 90px;
+                        padding: 12px;
+                    }
+                    
+                    .client-logo {
+                        margin: 0 1rem;
+                    }
                 }
                 </style>
             </div>
