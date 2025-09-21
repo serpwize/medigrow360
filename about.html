@@ -445,31 +445,192 @@
                 <div class="section__header text-center">
                     <h2 id="testimonials-title">What Healthcare Professionals Say About Us</h2>
                     <p class="section__subtitle">
-                        Real feedback from medical professionals who have transformed their practice with our help.
+                        Real feedback from medical professionals who have transformed their practice growth with our proven marketing strategies.
                     </p>
                 </div>
                 
-                <div class="grid grid--2">
-                    <article class="testimonial">
-                        <blockquote class="testimonial__content">
-                            "Working with MediGrow360 has been transformational for our practice. Their team understands healthcare marketing like no other agency we've worked with. They're true partners in our growth."
+                <div class="testimonials-grid">
+                    <!-- TinySteps Clinic Testimonial -->
+                    <article class="testimonial-card">
+                        <div class="testimonial-card__header">
+                            <div class="testimonial-card__photo">
+                                <img src="https://medigrow360.com/customer-testimonials/tinystep-sopie-taylor.png" alt="Dr. Sophie Taylor" class="doctor-headshot">
+                            </div>
+                            <div class="testimonial-card__clinic">
+                                <h3 class="clinic-name">TinySteps Clinic</h3>
+                                <div class="clinic-location">Melbourne, Australia</div>
+                            </div>
+                        </div>
+                        <blockquote class="testimonial-card__quote">
+                            "MediGrow360 helped us grow our clinic's visibility in Australia. Their healthcare marketing expertise brought consistent new inquiries and strengthened trust among families."
                         </blockquote>
-                        <footer>
-                            <cite class="testimonial__author">Dr. Anita Gupta</cite>
-                            <div class="testimonial__role">Hospital Administrator, Delhi</div>
+                        <footer class="testimonial-card__author">
+                            <cite class="doctor-name">Dr. Sophie Taylor</cite>
+                            <div class="doctor-title">Head Paediatric Consultant</div>
                         </footer>
                     </article>
                     
-                    <article class="testimonial">
-                        <blockquote class="testimonial__content">
-                            "The level of compliance and professionalism MediGrow360 brings to healthcare marketing is exceptional. They helped us grow ethically and sustainably while maintaining our reputation."
+                    <!-- Devaki IVF Testimonial -->
+                    <article class="testimonial-card">
+                        <div class="testimonial-card__header">
+                            <div class="testimonial-card__photo">
+                                <img src="https://medigrow360.com/customer-testimonials/devakiivf-poonam-png" alt="Dr. Poonam R. Rajput" class="doctor-headshot">
+                            </div>
+                            <div class="testimonial-card__clinic">
+                                <h3 class="clinic-name">Devaki IVF</h3>
+                                <div class="clinic-location">India</div>
+                            </div>
+                        </div>
+                        <blockquote class="testimonial-card__quote">
+                            "Thanks to MediGrow360, Devaki IVF now connects with more couples seeking advanced fertility treatments. Their tailored strategies made our clinic's presence stronger than ever."
                         </blockquote>
-                        <footer>
-                            <cite class="testimonial__author">Dr. Rajesh Kumar</cite>
-                            <div class="testimonial__role">Cardiologist, Mumbai</div>
+                        <footer class="testimonial-card__author">
+                            <cite class="doctor-name">Dr. Poonam R. Rajput</cite>
+                            <div class="doctor-title">MBBS, MS (OBGY), MNAMS<br>IVF & Laparoscopic Specialist</div>
+                        </footer>
+                    </article>
+                    
+                    <!-- MysaDerma Testimonial -->
+                    <article class="testimonial-card">
+                        <div class="testimonial-card__header">
+                            <div class="testimonial-card__photo">
+                                <img src="https://medigrow360.com/customer-testimonials/Dr-Apurva-Raut.webp" alt="Dr. Apoorva Raut" class="doctor-headshot">
+                            </div>
+                            <div class="testimonial-card__clinic">
+                                <h3 class="clinic-name">MysaDerma</h3>
+                                <div class="clinic-location">Dermatology Clinic</div>
+                            </div>
+                        </div>
+                        <blockquote class="testimonial-card__quote">
+                            "MediGrow360 has been a true growth partner for MySADERMA. Their digital solutions improved our reach and brought in patients looking for advanced dermatology care."
+                        </blockquote>
+                        <footer class="testimonial-card__author">
+                            <cite class="doctor-name">Dr. Apoorva Raut</cite>
+                            <div class="doctor-title">MBBS, FCPS Dermatologist</div>
                         </footer>
                     </article>
                 </div>
+                
+                <!-- Testimonials Styling -->
+                <style>
+                .testimonials-grid {
+                    display: grid;
+                    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+                    gap: 2rem;
+                    margin-top: 3rem;
+                }
+                
+                .testimonial-card {
+                    background: white;
+                    border-radius: 16px;
+                    padding: 2rem;
+                    box-shadow: 0 4px 20px rgba(21, 94, 99, 0.08);
+                    border: 1px solid rgba(21, 94, 99, 0.1);
+                    transition: all 0.3s ease;
+                    position: relative;
+                }
+                
+                .testimonial-card:hover {
+                    transform: translateY(-4px);
+                    box-shadow: 0 8px 30px rgba(21, 94, 99, 0.15);
+                    border: 1px solid rgba(21, 94, 99, 0.2);
+                }
+                
+                .testimonial-card::before {
+                    content: '"';
+                    position: absolute;
+                    top: -10px;
+                    left: 30px;
+                    font-size: 4rem;
+                    color: rgba(21, 94, 99, 0.2);
+                    font-family: Georgia, serif;
+                    line-height: 1;
+                }
+                
+                .testimonial-card__header {
+                    display: flex;
+                    align-items: center;
+                    gap: 1rem;
+                    margin-bottom: 1.5rem;
+                }
+                
+                .testimonial-card__photo {
+                    flex-shrink: 0;
+                }
+                
+                .doctor-headshot {
+                    width: 70px;
+                    height: 70px;
+                    border-radius: 50%;
+                    object-fit: cover;
+                    border: 3px solid rgba(21, 94, 99, 0.15);
+                    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+                }
+                
+                .clinic-name {
+                    font-size: 1.1rem;
+                    font-weight: 600;
+                    color: #155E63;
+                    margin-bottom: 0.25rem;
+                }
+                
+                .clinic-location {
+                    font-size: 0.875rem;
+                    color: #6B7280;
+                    font-weight: 500;
+                }
+                
+                .testimonial-card__quote {
+                    font-size: 1rem;
+                    line-height: 1.6;
+                    color: #374151;
+                    font-style: italic;
+                    margin-bottom: 1.5rem;
+                    position: relative;
+                }
+                
+                .testimonial-card__author {
+                    border-top: 1px solid rgba(21, 94, 99, 0.1);
+                    padding-top: 1rem;
+                }
+                
+                .doctor-name {
+                    display: block;
+                    font-weight: 600;
+                    color: #155E63;
+                    font-size: 1rem;
+                    margin-bottom: 0.25rem;
+                    font-style: normal;
+                }
+                
+                .doctor-title {
+                    font-size: 0.875rem;
+                    color: #6B7280;
+                    line-height: 1.4;
+                }
+                
+                @media (max-width: 768px) {
+                    .testimonials-grid {
+                        grid-template-columns: 1fr;
+                        gap: 1.5rem;
+                    }
+                    
+                    .testimonial-card {
+                        padding: 1.5rem;
+                    }
+                    
+                    .testimonial-card__header {
+                        flex-direction: column;
+                        text-align: center;
+                        gap: 0.75rem;
+                    }
+                    
+                    .doctor-headshot {
+                        width: 80px;
+                        height: 80px;
+                    }
+                }
+                </style>
             </div>
         </section>
         
